@@ -59,7 +59,7 @@ body .wrapper.city-level-page .blog__detail .city-level__service-link {
 }
 @media screen and (min-width: 768px) {
 	.pt-container {
-		padding: 0 24px;
+		padding: 12px 24px;
 	}
 }
 @media screen and (min-width: 1200px) {
