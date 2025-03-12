@@ -53,14 +53,9 @@ body .wrapper.city-level-page .blog__detail .city-level__service-link {
 }
 
 .pt-container {
-	padding: 24px;
+	padding: 0px 24px;
 	max-width: 1200px;
 	width: 100%;
-}
-@media screen and (min-width: 768px) {
-	.pt-container {
-		padding: 12px 24px;
-	}
 }
 @media screen and (min-width: 1200px) {
 	.pt-container {
@@ -2962,6 +2957,12 @@ body .wrapper.city-level-page .blog__detail .city-level__service-link {
 .pt-industry-section {
 	display: flex;
 	flex-direction: column;
+	padding: 24px 0;
+}
+@media screen and (min-width: 768px) {
+	.pt-industry-section {
+		padding: 0;
+	}
 }
 .pt-industry-section__wrapper {
 	display: flex;
