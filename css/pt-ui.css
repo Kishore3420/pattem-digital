@@ -6158,6 +6158,9 @@ header.header .header__nav-item__mega {
 .pt-testimonials__brands .brand-swiper-next:after {
 	display: none;
 }
+.pt-testimonials__brands .brand-swiper-prev {
+	rotate: 180deg;
+}
 
 .text-and-card {
 	padding: 30px 14px 50px;
