@@ -1,0 +1,55 @@
+@import url("https://use.typekit.net/sak4oir.css");
+@font-face {
+    font-family: "gibsonboldv2";
+    src: url('https://pattemdigital.com/devp/src/styles/fonts/gibson-bold-webfont.woff2');
+    src: url('https://pattemdigital.com/devp/src/styles/fonts/gibson-bold-webfont.woff2')format('woff2'),
+    url("https://pattemdigital.com/devp/src/styles/fonts/gibson-regular-webfont.woff2")format('woff2');
+}
+
+@font-face {
+    font-family: "gibsonboldv3";
+    src: url('https://pattemdigital.com/devp/src/styles/fonts/gibson-bold-webfont.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: gibsonboldv2;
+    src: url('https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/fonts/gibson-bold-webfont.woff2');
+    src: url('https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/fonts/gibson-bold-webfont.woff') format('woff'),
+    url('https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/fonts/gibson-bold-webfont.woff2') format('woff2');
+} */
+
+@font-face {
+    font-family: "Gibson W04 Bold";
+    src: url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.eot");
+    src: url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/29bee0d28e4d06b7454ae7b8d012ac8f.svg#Gibson W04 Bold")format("svg");
+}
+
+/* @font-face {
+    font-family: "Astorica";
+    src: url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.eot");
+    src: url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/952bab25f6798d6bb1937d67e9bee4dd.svg#Sans")format("svg");
+} */
+
+@font-face {
+    font-family: "Astoria Sans W00 ExtraBold";
+    src: url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.eot");
+    src: url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c5e7c792e003e3506a625caf9afbfdda.svg#Astoria Sans W00 ExtraBold")format("svg");
+}
+
+h1 {
+    font-family: "Gibson W04 Bold";
+}

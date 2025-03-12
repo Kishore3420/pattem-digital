@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pattem site demo pages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+    <div class="container demo-container">
+      <div class="demo-link-content">
+          <img height="200" src="https://thumb.ac-illust.com/ce/ce98d04bf4e6116bcc412f48a24bac7b_t.jpeg" alt="Demo image">
+          <h1 class="demo-heading">Let's demo it!</h1>
+          <div class="demo-links">
+              <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="material-icons">arrow_forward</span>
+                    <button type="button" class="btn btn-light">
+                        <a class="link-opacity-100" href="home.html">Home page</a>
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <span class="material-icons">arrow_forward</span>
+                    <button type="button" class="btn btn-light">
+                        <a class="link-opacity-100" href="consulting.html">Consulting page</a>
+                    </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="contact-us.html">Contact page</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="blog.html">Blog page</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="blog-details.html">Blog details V1</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="blog-details-v2.html">Blog details V2</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="search-results.html">Search results</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="no-results.html">No results</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="job-details.html">Job details</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="privacy-policy.html">Privacy policy page</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="project-email-template.html">Project email template</a>
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <span class="material-icons">arrow_forward</span>
+                  <button type="button" class="btn btn-light">
+                      <a class="link-opacity-100" href="enquiries-email-template.html">Enquiries email template</a>
+                  </button>
+                </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
