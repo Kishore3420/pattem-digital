@@ -175,7 +175,7 @@
     justify-content: center;
     padding-right: 0;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .pt-banner--home-banner .pt-banner__text-block {
       padding-right: 8%;
     }
@@ -869,7 +869,7 @@
 
   @media screen and (min-width: 768px) {
     .pt-brand-slider__box-slide__title {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
   }
   .pt-brand-slider__box-slide__timeline {
