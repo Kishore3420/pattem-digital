@@ -159,7 +159,11 @@
     background: #FB0F01;
     transition: background-color 1s linear;
     height: 100vh;
-    max-height: 781px;
+  }
+  @media screen and (min-width: 768px) {
+    .pt-banner--home-banner {
+      height: 781px;
+    }
   }
   .pt-banner--home-banner .pt-banner__content {
     gap: 24px;
@@ -174,10 +178,20 @@
   .pt-banner--home-banner .pt-banner__text-block span {
     color: #ffffff;
     font-family: "astoria-sans", sans-serif;
-    font-size: 60px;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 78.12px;
+    line-height: 1.5;
     text-align: left;
+  }
+  @media screen and (min-width: 768px) {
+    .pt-banner--home-banner .pt-banner__text-block span {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .pt-banner--home-banner .pt-banner__text-block span {
+      font-size: 4rem;
+    }
   }
   .pt-banner--home-banner .pt-banner__text-block h2 {
     color: #000000;
