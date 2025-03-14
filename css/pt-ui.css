@@ -173,7 +173,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 10%;
+    padding-right: 0;
+  }
+  @media screen and (min-width: 768px) {
+    .pt-banner--home-banner .pt-banner__text-block {
+      padding-right: 8%;
+    }
   }
   .pt-banner--home-banner .pt-banner__text-block span {
     color: #ffffff;
@@ -855,11 +860,17 @@
     width: clamp(50px, 158px, max(90vw, 158px));
   }
   .pt-brand-slider__box-slide__title {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 26.04px;
+    line-height: 1.5;
     max-width: 85%;
     text-align: left;
+  }
+
+  @media screen and (min-width: 768px) {
+    .pt-brand-slider__box-slide__title {
+      font-size: 1.25rem;
+    }
   }
   .pt-brand-slider__box-slide__timeline {
     display: flex;
