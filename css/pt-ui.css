@@ -185,12 +185,12 @@
   }
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 3.5rem;
+      font-size: 2.75rem;
     }
   }
   @media screen and (min-width: 1440px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 4rem;
+      font-size: 3.25rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block h2 {
@@ -214,11 +214,6 @@
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block p {
       font-size: 2rem;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .pt-banner--home-banner .pt-banner__text-block p {
-      font-size: 2.75rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block button {
