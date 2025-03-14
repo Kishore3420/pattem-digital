@@ -177,7 +177,12 @@
   }
   @media screen and (min-width: 1024px) {
     .pt-banner--home-banner .pt-banner__text-block {
-      padding-right: 8%;
+      padding-right: 7.5%;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .pt-banner--home-banner .pt-banner__text-block {
+      padding-right: 10%;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block span {
@@ -863,13 +868,22 @@
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
-    max-width: 85%;
     text-align: left;
   }
 
   @media screen and (min-width: 768px) {
     .pt-brand-slider__box-slide__title {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .pt-brand-slider__box-slide__title {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .pt-brand-slider__box-slide__title {
+      font-size: 1.75rem;
     }
   }
   .pt-brand-slider__box-slide__timeline {
