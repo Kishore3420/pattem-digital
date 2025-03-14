@@ -178,19 +178,19 @@
   .pt-banner--home-banner .pt-banner__text-block span {
     color: #ffffff;
     font-family: "astoria-sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
     text-align: left;
   }
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
     }
   }
   @media screen and (min-width: 1440px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block h2 {
@@ -205,20 +205,20 @@
   .pt-banner--home-banner .pt-banner__text-block p {
     color: #ffffff;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 1.25rem;
     font-weight: 300;
-    line-height: 36px;
+    line-height: 1.5;
     margin-top: 0px;
     text-align: left;
   }
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block p {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   @media screen and (min-width: 1440px) {
     .pt-banner--home-banner .pt-banner__text-block p {
-      font-size: 2.75rem;
+      font-size: 2rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block button {
