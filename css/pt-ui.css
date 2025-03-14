@@ -870,20 +870,9 @@
     line-height: 1.5;
     text-align: left;
   }
-
-  @media screen and (min-width: 768px) {
-    .pt-brand-slider__box-slide__title {
-      font-size: 1.25rem;
-    }
-  }
   @media screen and (min-width: 1024px) {
     .pt-brand-slider__box-slide__title {
       font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .pt-brand-slider__box-slide__title {
-      font-size: 1.75rem;
     }
   }
   .pt-brand-slider__box-slide__timeline {
