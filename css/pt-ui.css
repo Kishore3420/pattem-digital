@@ -266,7 +266,7 @@
   }
   @media screen and (min-width: 768px) {
     .pt-banner__brand-slider .swiper {
-      max-height: 25vh;
+      max-height: 33.3333333333vh;
     }
   }
   @media screen and (min-width: 1440px) {
