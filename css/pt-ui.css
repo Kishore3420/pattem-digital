@@ -178,19 +178,19 @@
   .pt-banner--home-banner .pt-banner__text-block span {
     color: #ffffff;
     font-family: "astoria-sans", sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.5;
     text-align: left;
   }
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
     }
   }
   @media screen and (min-width: 1440px) {
     .pt-banner--home-banner .pt-banner__text-block span {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block h2 {
@@ -213,12 +213,12 @@
   }
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block p {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
   @media screen and (min-width: 1440px) {
     .pt-banner--home-banner .pt-banner__text-block p {
-      font-size: 2rem;
+      font-size: 2.75rem;
     }
   }
   .pt-banner--home-banner .pt-banner__text-block button {
@@ -238,6 +238,7 @@
   .pt-banner__context {
     display: flex;
     width: 100%;
+    align-items: center;
   }
   .pt-banner__text-block {
     flex: 1 1 60%;
@@ -260,9 +261,20 @@
   }
   .pt-banner__brand-slider .swiper {
     width: 100%;
-    max-height: 50vh;
+    max-height: 25vh;
     height: 100%;
   }
+  @media screen and (min-width: 768px) {
+    .pt-banner__brand-slider .swiper {
+      max-height: 25vh;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .pt-banner__brand-slider .swiper {
+      max-height: 50vh;
+    }
+  }
+
   .pt-banner__brand-slider .swiper-slide {
     text-align: center;
     font-size: 18px;
