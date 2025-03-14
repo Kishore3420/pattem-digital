@@ -183,7 +183,6 @@
     line-height: 1.5;
     text-align: left;
   }
-
   @media screen and (min-width: 768px) {
     .pt-banner--home-banner .pt-banner__text-block span {
       font-size: 2.75rem;
@@ -254,7 +253,12 @@
     display: flex;
   }
   .pt-banner__text-block .swiper-slide img {
-    height: 80px;
+    height: 4rem;
+  }
+  @media screen and (min-width: 768px) {
+    .pt-banner__text-block .swiper-slide img {
+      height: 5rem;
+    }
   }
   .pt-banner__brand-slider {
     display: flex;
