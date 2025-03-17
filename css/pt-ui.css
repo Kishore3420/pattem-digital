@@ -6589,3 +6589,86 @@
     justify-content: center;
   }
   
+  /* Animation for the LCP element */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+  will-change: opacity, transform;
+  display: inline-block; /* Ensures the animation applies properly */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Performance optimizations */
+.pt-banner img {
+  contain: layout paint style;
+  content-visibility: auto;
+}
+
+/* LCP element optimization */
+.brand-tagline {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: currentColor;
+  display: inline-block;
+  contain: layout;
+}
+
+/* First image in the slider - LCP candidate */
+#brand-info-slider .swiper-slide:first-child img {
+  contain: layout paint style;
+}
+
+/* Optimize carousel performance */
+.swiper-wrapper {
+  will-change: transform;
+  contain: layout;
+}
+
+/* Ensure links are visible and accessible */
+.pt-banner__text-block__details-cta {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.pt-banner__text-block__details-cta:hover,
+.pt-banner__text-block__details-cta:focus {
+  background-color: #0056b3;
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Responsive optimizations */
+@media (max-width: 768px) {
+  .animate-fade-in {
+    animation-duration: 0.5s; /* Faster animation on mobile for performance */
+  }
+  
+  .brand-tagline {
+    font-size: 1.5rem; /* Smaller font on mobile */
+  }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+}
