@@ -4367,5 +4367,46 @@
 				});
 			});
 		</script>
+		<script type="module">
+			document.addEventListener('DOMContentLoaded', function () {
+				// Get the banner element and careers dropdown
+				const banner = document.querySelector('.pt-banner--home-banner');
+				const careersDropdown = document.querySelector('.careers__dropdown');
+
+				if (!banner || !careersDropdown) return;
+
+				// Function to update text color based on specific background colors
+				function updateTextColor() {
+					// Get the inline background color style
+					const bannerBgColor = banner.style.backgroundColor;
+
+					// Match against our three possible background colors
+					switch (bannerBgColor) {
+						case 'rgb(251, 15, 1)': // Red
+							careersDropdown.style.color = '#ffffff'; // White text
+							break;
+						case 'rgb(1, 1, 1)': // Black
+							careersDropdown.style.color = '#ffffff'; // White text
+							break;
+						case 'rgb(89, 13, 226)': // Purple
+							careersDropdown.style.color = '#ffffff'; // White text
+							break;
+						default:
+							careersDropdown.style.color = '#000000'; // Black text for any other color
+							break;
+					}
+				}
+
+				// Initial update
+				updateTextColor();
+
+				// Set up a MutationObserver to detect changes in the banner's inline style
+				const observer = new MutationObserver(updateTextColor);
+				observer.observe(banner, {
+					attributes: true,
+					attributeFilter: ['style'],
+				});
+			});
+		</script>
 	</body>
 </html>
