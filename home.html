@@ -4367,16 +4367,14 @@
 				});
 			});
 		</script>
+
 		<script type="module">
 			document.addEventListener('DOMContentLoaded', function () {
-				// Get the banner element and careers dropdown
+				// Get the banner element and all careers dropdown items
 				const banner = document.querySelector('.pt-banner--home-banner');
-				const careersDropdown = document.querySelector('.header__nav-item');
+				const navItems = document.querySelectorAll('.header__nav-item');
 
-				if (!banner || !careersDropdown) return;
-
-				// Get the anchor element inside the dropdown
-				const careersAnchor = careersDropdown.querySelector('a');
+				if (!banner || navItems.length === 0) return;
 
 				// Function to update text color based on specific background colors
 				function updateTextColor() {
@@ -4388,25 +4386,43 @@
 					// Match against our possible background colors and set appropriate contrast
 					switch (bannerBgColor) {
 						case 'rgb(251, 15, 1)': // Red
-							textColor = '#ffffff'; // White text for good contrast on red
+							textColor = '#1a1a1a'; // White text for good contrast on red
 							break;
 						case 'rgb(1, 1, 1)': // Black
-							textColor = '#ffffff'; // White text for good contrast on black
+							textColor = '#ff2727'; // White text for good contrast on black
 							break;
 						case 'rgb(89, 13, 226)': // Purple
-							textColor = '#ffffff'; // White text for good contrast on purple
+							textColor = '#ff2727'; // White text for good contrast on purple
 							break;
 						default: // White
 							textColor = '#000000'; // Black text for good contrast on white
 							break;
 					}
 
-					// Apply the color to both the dropdown and its anchor
-					careersDropdown.style.color = textColor;
-					if (careersAnchor) {
-						careersAnchor.style.color = textColor;
-					}
+					// Apply the color to all nav items and their anchors
+					navItems.forEach((navItem) => {
+						navItem.style.color = textColor;
+
+						// Get the anchor element inside each nav item
+						const anchor = navItem.querySelector('a');
+						if (anchor) {
+							// Set direct color for the anchor element
+							// anchor.style.color = textColor;
+
+							// Set CSS variable for the ::before pseudo-element
+							anchor.style.setProperty('--pseudo-element-color', textColor);
+						}
+					});
 				}
+
+				// Create and add a style element to set the ::before color via CSS variable
+				const styleElement = document.createElement('style');
+				styleElement.textContent = `
+        .header__nav-item a::before {
+            color: var(--pseudo-element-color, inherit);
+        }
+    `;
+				document.head.appendChild(styleElement);
 
 				// Initial update
 				updateTextColor();
