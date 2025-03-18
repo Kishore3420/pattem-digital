@@ -4,13 +4,13 @@
 "description":"Pattem Digital - Design Research | AI | Big Data | Software & Product Development | Strategy Consultants",	
   "icons": [
   {
-    "src": "https:\/\/pattemdigital.com\/production\/wp-content\/uploads\/2018/07\/case-8.png",
+    "src": "https://pattemdigital.com/production/icons/favicon-32x32.png",
     "sizes": "192x192",
     "type": "image\/png",      
   "purpose":"any maskable"
 },
 {
-    "src": "https:\/\/pattemdigital.com\/production\/icons\/android-icon-192x192.png",
+    "src": "https://pattemdigital.com/production/icons/favicon-32x32.png",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "any maskable"
