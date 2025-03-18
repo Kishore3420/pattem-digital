@@ -4371,29 +4371,40 @@
 			document.addEventListener('DOMContentLoaded', function () {
 				// Get the banner element and careers dropdown
 				const banner = document.querySelector('.pt-banner--home-banner');
-				const careersDropdown = document.querySelector('.careers__dropdown');
+				const careersDropdown = document.querySelector('.header__nav-item');
 
 				if (!banner || !careersDropdown) return;
+
+				// Get the anchor element inside the dropdown
+				const careersAnchor = careersDropdown.querySelector('a');
 
 				// Function to update text color based on specific background colors
 				function updateTextColor() {
 					// Get the inline background color style
 					const bannerBgColor = banner.style.backgroundColor;
 
-					// Match against our three possible background colors
+					let textColor;
+
+					// Match against our possible background colors and set appropriate contrast
 					switch (bannerBgColor) {
 						case 'rgb(251, 15, 1)': // Red
-							careersDropdown.style.color = '#ffffff'; // White text
+							textColor = '#ffffff'; // White text for good contrast on red
 							break;
 						case 'rgb(1, 1, 1)': // Black
-							careersDropdown.style.color = '#ffffff'; // White text
+							textColor = '#ffffff'; // White text for good contrast on black
 							break;
 						case 'rgb(89, 13, 226)': // Purple
-							careersDropdown.style.color = '#ffffff'; // White text
+							textColor = '#ffffff'; // White text for good contrast on purple
 							break;
-						default:
-							careersDropdown.style.color = '#000000'; // Black text for any other color
+						default: // White
+							textColor = '#000000'; // Black text for good contrast on white
 							break;
+					}
+
+					// Apply the color to both the dropdown and its anchor
+					careersDropdown.style.color = textColor;
+					if (careersAnchor) {
+						careersAnchor.style.color = textColor;
 					}
 				}
 
