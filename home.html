@@ -2525,9 +2525,6 @@
     src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_lazy-load.js?ver=1724716860"
     id="lazyload.jquery-js"></script>
   <script type="text/javascript"
-    src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_base.js?ver=1724716860"
-    id="base.jquery-js"></script>
-  <script type="text/javascript"
     src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_header.js?ver=1724716860"
     id="header.jquery-js"></script>
   <script type="text/javascript"
@@ -2576,7 +2573,6 @@
         }
       });
 
-      // Initizlize the footer component.
       new Footer({
         selector: '.pt-footer'
       });
@@ -2590,20 +2586,6 @@
 
       new Faq({
         selector: '#pt-faq'
-      });
-
-      new GetInsights({
-        selector: ".pt-get-insights__wrapper",
-        formSelector: ".pt-form",
-        skipSubmission: true,
-        onSuccess: (formData) => {
-          console.log("Form validation successful.");
-          console.log(formData);
-        },
-        onError: () => {
-          console.log("Form validation failed.");
-        },
-        identity: "getInsights"
       });
     });
   </script>
