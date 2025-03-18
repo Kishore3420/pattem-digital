@@ -4373,6 +4373,7 @@
 				// Get the banner element and all careers dropdown items
 				const banner = document.querySelector('.pt-banner--home-banner');
 				const navItems = document.querySelectorAll('.header__nav-item');
+        const headerLogo = document.querySelector('.header__logo');
 
 				if (!banner || navItems.length === 0) return;
 
@@ -4387,12 +4388,15 @@
 					switch (bannerBgColor) {
 						case 'rgb(251, 15, 1)': // Red
 							textColor = '#1a1a1a'; // White text for good contrast on red
+              headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
 							break;
 						case 'rgb(1, 1, 1)': // Black
 							textColor = '#ff2727'; // White text for good contrast on black
+              headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
 							break;
 						case 'rgb(89, 13, 226)': // Purple
 							textColor = '#ff2727'; // White text for good contrast on purple
+              headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
 							break;
 						default: // White
 							textColor = '#000000'; // Black text for good contrast on white
