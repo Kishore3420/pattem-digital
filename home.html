@@ -4419,7 +4419,7 @@
 				const styleElement = document.createElement('style');
 				styleElement.textContent = `
         .header__nav-item a::before {
-            color: var(--pseudo-element-color, inherit);
+            color: var(--pseudo-element-color, inherit) !important;
         }
     `;
 				document.head.appendChild(styleElement);
