@@ -3403,14 +3403,14 @@
 											</div>
 										</div>
 									</div>
-                  <div class="pt-what-we-do__view-more">
-                    <a
-                      href="https://pattemdigital.com/insight/"
-                      class="btn btn--primary btn--lg btn--outlined"
-                      aria-label="View all Stories"
-                      >View All</a
-                    >
-                  </div>
+									<div class="pt-what-we-do__view-more">
+										<a
+											href="https://pattemdigital.com/insight/"
+											class="btn btn--primary btn--lg btn--outlined"
+											aria-label="View all Stories"
+											>View All</a
+										>
+									</div>
 								</div>
 							</section>
 							<!-- Our stories section end -->
@@ -3423,7 +3423,9 @@
 												<h3 class="pt-faq__sub-title">Faq</h3>
 												<h2 class="pt-faq__title">Frequently Asked Questions</h2>
 												<p class="pt-faq__description">Can't find your question?</p>
-												<button class="pt-button--view-more btn btn--primary btn--lg btn--outlined">
+												<button
+													class="pt-button--view-more btn btn--primary btn--lg btn--outlined"
+												>
 													Ask us here
 												</button>
 											</div>
@@ -3602,7 +3604,9 @@
 										<input type="hidden" name="_wp_http_referer" value="/?Dsdd" /><input
 										type="email" placeholder="Email address" name="useremail_pattem pt-validate="
 										required"="">
-										<button type="submit" class="btn btn--white btn--lg btn--outlined">Subscribe</button>
+										<button type="submit" class="btn btn--white btn--lg btn--outlined">
+											Subscribe
+										</button>
 									</form>
 								</div>
 								<div class="pt-footer__section pt-footer__social-accounts">
@@ -4371,61 +4375,62 @@
 			document.addEventListener('DOMContentLoaded', function () {
 				const banner = document.querySelector('.pt-banner--home-banner');
 				const navItems = document.querySelectorAll('.header__nav-item');
-        const headerLogo = document.querySelector('.header__logo');
-        const headerBurger = document.querySelector('.header__burger');
+				const headerLogo = document.querySelector('.header__logo');
+				const headerBurger = document.querySelector('.header__burger');
 
-				// if (!banner || navItems.length === 0 || headerLogo || headerBurger) return;
+				// Early return if essential elements are missing
+				if (!banner || navItems.length === 0 || !headerLogo || !headerBurger) return;
+
+				// Create style element once (outside the update function)
+				const styleElement = document.createElement('style');
+				document.head.appendChild(styleElement);
+
+				// URLs defined as constants to avoid repetition
+				const LOGO_DARK_URL = 'assets/home-page/logo-dark.svg';
+				const LOGO_HOME_URL =
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg';
+
+				// Cache burger elements
+				const burgerLine1 = headerBurger.querySelector('.line1');
+				const burgerLine2 = headerBurger.querySelector('.line2');
 
 				function updateTextColor() {
-					const bannerBgColor = banner.style.backgroundColor;
+					const bannerBgColor = getComputedStyle(banner).backgroundColor;
 
 					let iconColor;
-          let afterColor;
+					let afterColor;
 
-
-					switch (bannerBgColor) {
-						case 'rgb(251, 15, 1)': // Red
-              iconColor = '#ffffff';
-              afterColor = iconColor;
-              headerLogo.style.background = 'url(assets/home-page/logo-dark.svg) no-repeat';
-              headerBurger.querySelector('.line1').background = iconColor;
-              headerBurger.querySelector('.line2').background = iconColor;
-						case 'rgb(1, 1, 1)': // Black
-						case 'rgb(89, 13, 226)': // Purple
-							iconColor = '#ff2727';
-              headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
-              headerBurger.querySelector('.line1').background = iconColor;
-              headerBurger.querySelector('.line2').background = iconColor;
-              afterColor= 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%);';
-							break;
-						default: // White
-							textColor = '#2c1349;';
-							break;
+					// More robust color matching using includes() instead of exact match
+					if (bannerBgColor.includes('251, 15, 1') || bannerBgColor.includes('rgb(251, 15, 1)')) {
+						// Red banner
+						iconColor = '#ffffff';
+						afterColor = iconColor;
+						headerLogo.style.background = `url(${LOGO_DARK_URL}) no-repeat`;
+						if (burgerLine1) burgerLine1.style.background = iconColor;
+						if (burgerLine2) burgerLine2.style.background = iconColor;
+					} else if (bannerBgColor.includes('1, 1, 1') || bannerBgColor.includes('89, 13, 226')) {
+						// Black or Purple banner - missing 'break' fixed
+						iconColor = '#ff2727';
+						afterColor = 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)';
+						headerLogo.style.background = `url(${LOGO_HOME_URL}) no-repeat`;
+						if (burgerLine1) burgerLine1.style.background = iconColor;
+						if (burgerLine2) burgerLine2.style.background = iconColor;
+					} else {
+						// White or default banner
+						iconColor = '#2c1349';
+						afterColor = iconColor;
 					}
 
-					// Apply the color to all nav items and their anchors
-					navItems.forEach((navItem) => {
-						const anchor = navItem.querySelector('a');
-						if (anchor) {
-							// Set CSS variable for the ::before pseudo-element
-							anchor.style.setProperty('--pseudo-element-color', iconColor);
-							anchor.style.setProperty('--pseudo-after-color', afterColor);
-
-						}
-					});
-				}
-
-				// Create and add a style element to set the ::before color via CSS variable
-				const styleElement = document.createElement('style');
-				styleElement.textContent = `
+					// Update CSS variables in one go via the style element
+					styleElement.textContent = `
         .header__nav-item a::before {
-            color: var(--pseudo-element-color, inherit) !important;
+          color: ${iconColor} !important;
         }
         .header__nav-item a::after {
-            background: var(--pseudo-after-color, inherit) !important;
+          background: ${afterColor} !important;
         }
-    `;
-				document.head.appendChild(styleElement);
+      `;
+				}
 
 				// Initial update
 				updateTextColor();
