@@ -2045,31 +2045,31 @@
 												<div class="pt-what-we-do__list-item__content">
 													<div class="pt-what-we-do__list-item__tags">
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/eye-tracking/"
 															aria-label="Learn about Usability Testing Services"
 															>Usability Testing Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/ux-expert-reviews/"
 															aria-label="Learn about UX Expert Reviews Service"
 															>UX Expert Reviews Service</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/eye-tracking/"
 															aria-label="Learn about Eye Tracking Services"
 															>Eye Tracking Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/user-experience-design/"
 															aria-label="Learn about User Experience Design Services"
 															>User Experience Design Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/ideation/"
 															aria-label="Learn about Product Ideation Consulting"
 															>Product Ideation Consulting</a
@@ -2132,31 +2132,31 @@
 													<div class="pt-what-we-do__list-item__tags">
 														<a
 															href="https://pattemdigital.com/nextjs-development-company/"
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															aria-label="Learn about Next.JS Development"
 															>Next.JS Development</a
 														>
 														<a
 															href="https://pattemdigital.com/swift-development/"
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															aria-label="Learn about Swift Development"
 															>Swift Development</a
 														>
 														<a
 															href="https://pattemdigital.com/kotlin-development/"
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															aria-label="Learn about Kotlin Development"
 															>Kotlin Development</a
 														>
 														<a
 															href="https://pattemdigital.com/react-native-app-development-services/"
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															aria-label="Learn about React Native App Development"
 															>React Native App Development</a
 														>
 														<a
 															href="https://pattemdigital.com/flutter-app-development/"
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															aria-label="Learn about Flutter App Development"
 															>Flutter App Development</a
 														>
@@ -2220,31 +2220,31 @@
 												<div class="pt-what-we-do__list-item__content">
 													<div class="pt-what-we-do__list-item__tags">
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/cms-technologies/"
 															aria-label="Learn about CMS Technology Services"
 															>CMS Technology Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/sap-technologies/"
 															aria-label="Learn about SAP Technologies Services"
 															>SAP Technologies Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/big-data/"
 															aria-label="Learn about Big Data Services"
 															>Big Data Services</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/artificial-intelligence-development/"
 															aria-label="Learn about Artificial Intelligence Development"
 															>Artificial Intelligence Development</a
 														>
 														<a
-															class="btn btn--secondary btn--outlined btn--sm"
+															class="btn btn--info btn--sm"
 															href="https://pattemdigital.com/iot-application-development/"
 															aria-label="Learn about IoT Application Development"
 															>IoT Application Development</a
@@ -4341,6 +4341,35 @@
 			src="https://pattemdigital.com/production/wp-content/plugins/wp-customization/resources/js/wpc_theme.js?ver=1610141043"
 			id="wpc_template_action-js"
 		></script>
+		<script type="module">
+			import { MegaMenu, Footer, Testimonials, Faq, Banner, GetInsights } from './js/index.min.js';
+
+			document.addEventListener('DOMContentLoaded', function (event) {
+				new MegaMenu();
+
+				new Banner({
+					selector: '.pt-banner',
+					sliderConfigurations: {
+						pagination: '.pt-brand-slider__box-slide__timeline',
+					},
+				});
+
+				new Footer({
+					selector: '.pt-footer',
+				});
+
+				new Testimonials({
+					selector: '.pt-testimonials',
+					contentSwiper: '.content-swiper',
+					imageSwiper: '.image-swiper',
+					clientSwiper: '.mySwiper',
+				});
+
+				new Faq({
+					selector: '#pt-faq',
+				});
+			});
+		</script>
 
 		<script type="module">
 			document.addEventListener('DOMContentLoaded', function () {
