@@ -4400,25 +4400,43 @@
 					let iconColor;
 					let afterColor;
 
-					// More robust color matching using includes() instead of exact match
-					if (bannerBgColor.includes('251, 15, 1') || bannerBgColor.includes('rgb(251, 15, 1)')) {
-						// Red banner
-						iconColor = '#ffffff';
-						afterColor = iconColor;
-						headerLogo.style.background = `url(${LOGO_DARK_URL}) no-repeat`;
-						if (burgerLine1) burgerLine1.style.background = iconColor;
-						if (burgerLine2) burgerLine2.style.background = iconColor;
-					} else if (bannerBgColor.includes('1, 1, 1') || bannerBgColor.includes('89, 13, 226')) {
-						// Black or Purple banner - missing 'break' fixed
-						iconColor = '#ff2727';
-						afterColor = 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)';
-						headerLogo.style.background = `url(${LOGO_HOME_URL}) no-repeat`;
-						if (burgerLine1) burgerLine1.style.background = iconColor;
-						if (burgerLine2) burgerLine2.style.background = iconColor;
-					} else {
-						// White or default banner
-						iconColor = '#2c1349';
-						afterColor = iconColor;
+					// Helper function to determine color type
+					function getColorType(bgColor) {
+						if (bgColor.includes('251, 15, 1') || bgColor.includes('rgb(251, 15, 1)')) {
+							return 'red';
+						} else if (bgColor.includes('1, 1, 1')) {
+							return 'black';
+						} else if (bgColor.includes('89, 13, 226')) {
+							return 'purple';
+						} else {
+							return 'default';
+						}
+					}
+
+					const colorType = getColorType(bannerBgColor);
+
+					switch (colorType) {
+						case 'red':
+							iconColor = '#ffffff';
+							afterColor = iconColor;
+							headerLogo.style.background = `url(${LOGO_DARK_URL}) no-repeat`;
+							if (burgerLine1) burgerLine1.style.background = iconColor;
+							if (burgerLine2) burgerLine2.style.background = iconColor;
+							break;
+
+						case 'black':
+						case 'purple':
+							iconColor = '#ff2727';
+							afterColor = 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)';
+							headerLogo.style.background = `url(${LOGO_HOME_URL}) no-repeat`;
+							if (burgerLine1) burgerLine1.style.background = iconColor;
+							if (burgerLine2) burgerLine2.style.background = iconColor;
+							break;
+
+						default: // White or any other color
+							iconColor = '#2c1349';
+							afterColor = iconColor;
+							break;
 					}
 
 					// Update CSS variables in one go via the style element
