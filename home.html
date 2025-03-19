@@ -4369,13 +4369,12 @@
 
 		<script type="module">
 			document.addEventListener('DOMContentLoaded', function () {
-				// Get the banner element and all careers dropdown items
 				const banner = document.querySelector('.pt-banner--home-banner');
 				const navItems = document.querySelectorAll('.header__nav-item');
         const headerLogo = document.querySelector('.header__logo');
         const headerBurger = document.querySelector('.header__burger');
 
-				if (!banner || navItems.length === 0 || headerLogo || headerBurger) return;
+				// if (!banner || navItems.length === 0 || headerLogo || headerBurger) return;
 
 				function updateTextColor() {
 					const bannerBgColor = banner.style.backgroundColor;
