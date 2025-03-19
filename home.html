@@ -4373,47 +4373,45 @@
 				const banner = document.querySelector('.pt-banner--home-banner');
 				const navItems = document.querySelectorAll('.header__nav-item');
         const headerLogo = document.querySelector('.header__logo');
+        const headerBurger = document.querySelector('.header__burger');
 
-				if (!banner || navItems.length === 0) return;
+				if (!banner || navItems.length === 0 || headerLogo || headerBurger) return;
 
-				// Function to update text color based on specific background colors
 				function updateTextColor() {
-					// Get the inline background color style
 					const bannerBgColor = banner.style.backgroundColor;
 
-					let textColor;
+					let iconColor;
+          let afterColor;
 
-					// Match against our possible background colors and set appropriate contrast
+
 					switch (bannerBgColor) {
 						case 'rgb(251, 15, 1)': // Red
-							textColor = '#1a1a1a'; // White text for good contrast on red
+              iconColor = '#ffffff';
+              afterColor = iconColor;
               headerLogo.style.background = 'url(assets/home-page/logo-dark.svg) no-repeat';
-							break;
+              headerBurger.querySelector('.line1').background = iconColor;
+              headerBurger.querySelector('.line2').background = iconColor;
 						case 'rgb(1, 1, 1)': // Black
-							textColor = '#ff2727'; // White text for good contrast on black
-              headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
-							break;
 						case 'rgb(89, 13, 226)': // Purple
-							textColor = '#ff2727'; // White text for good contrast on purple
+							iconColor = '#ff2727';
               headerLogo.style.background = 'url(https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg) no-repeat';
+              headerBurger.querySelector('.line1').background = iconColor;
+              headerBurger.querySelector('.line2').background = iconColor;
+              afterColor= 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%);';
 							break;
 						default: // White
-							textColor = '#000000'; // Black text for good contrast on white
+							textColor = '#2c1349;';
 							break;
 					}
 
 					// Apply the color to all nav items and their anchors
 					navItems.forEach((navItem) => {
-						navItem.style.color = textColor;
-
-						// Get the anchor element inside each nav item
 						const anchor = navItem.querySelector('a');
 						if (anchor) {
-							// Set direct color for the anchor element
-							// anchor.style.color = textColor;
-
 							// Set CSS variable for the ::before pseudo-element
-							anchor.style.setProperty('--pseudo-element-color', textColor);
+							anchor.style.setProperty('--pseudo-element-color', iconColor);
+							anchor.style.setProperty('--pseudo-after-color', afterColor);
+
 						}
 					});
 				}
@@ -4423,6 +4421,9 @@
 				styleElement.textContent = `
         .header__nav-item a::before {
             color: var(--pseudo-element-color, inherit) !important;
+        }
+        .header__nav-item a::after {
+            background: var(--pseudo-after-color, inherit) !important;
         }
     `;
 				document.head.appendChild(styleElement);
