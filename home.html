@@ -4341,35 +4341,6 @@
 			src="https://pattemdigital.com/production/wp-content/plugins/wp-customization/resources/js/wpc_theme.js?ver=1610141043"
 			id="wpc_template_action-js"
 		></script>
-		<script type="module">
-			import { MegaMenu, Footer, Testimonials, Faq, Banner, GetInsights } from './js/index.min.js';
-
-			document.addEventListener('DOMContentLoaded', function (event) {
-				new MegaMenu();
-
-				new Banner({
-					selector: '.pt-banner',
-					sliderConfigurations: {
-						pagination: '.pt-brand-slider__box-slide__timeline',
-					},
-				});
-
-				new Footer({
-					selector: '.pt-footer',
-				});
-
-				new Testimonials({
-					selector: '.pt-testimonials',
-					contentSwiper: '.content-swiper',
-					imageSwiper: '.image-swiper',
-					clientSwiper: '.mySwiper',
-				});
-
-				new Faq({
-					selector: '#pt-faq',
-				});
-			});
-		</script>
 
 		<script type="module">
 			document.addEventListener('DOMContentLoaded', function () {
