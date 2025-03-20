@@ -4388,6 +4388,8 @@
 						'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg',
 				};
 
+				const DEFAULT_COLOR = 'rgb(251, 15, 1)';
+
 				const COLOR_MAPS = {
 					'rgb(251, 15, 1)': {
 						iconColor: '#ffffff',
@@ -4435,8 +4437,8 @@
 				document.head.appendChild(styleElement);
 
 				// Update UI based on banner background color
-				function updateUI() {
-					const bannerBgColor = elements.banner.style.backgroundColor;
+				function updateUI(forcedColor) {
+					const bannerBgColor = forcedColor || elements.banner.style.backgroundColor;
 					const colorScheme = COLOR_MAPS[bannerBgColor] || COLOR_MAPS.default;
 
 					// Update logo if needed
@@ -4464,11 +4466,11 @@
       `;
 				}
 
-				// Initial update
-				updateUI();
+				// Initial update with forced red color
+				updateUI(DEFAULT_COLOR);
 
 				// Set up a MutationObserver to detect changes in the banner's inline style
-				const observer = new MutationObserver(updateUI);
+				const observer = new MutationObserver(() => updateUI());
 				observer.observe(elements.banner, {
 					attributes: true,
 					attributeFilter: ['style'],
