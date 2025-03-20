@@ -4373,74 +4373,103 @@
 
 		<script type="module">
 			document.addEventListener('DOMContentLoaded', function () {
-				const banner = document.querySelector('.pt-banner--home-banner');
-				const navItems = document.querySelectorAll('.header__nav-item');
-				const headerLogo = document.querySelector('.header__logo');
-				const headerBurger = document.querySelector('.header__burger');
+				// Constants
+				const SELECTORS = {
+					banner: '.pt-banner--home-banner',
+					navItems: '.header__nav-item',
+					logo: '.header__logo',
+					burger: '.header__burger',
+				};
+
+				const ASSETS = {
+					logoDark:
+						'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-inverted.svg',
+					logoHome:
+						'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg',
+				};
+
+				const COLOR_MAPS = {
+					'rgb(251, 15, 1)': {
+						iconColor: '#ffffff',
+						afterColor: '#ffffff',
+						logo: ASSETS.logoDark,
+					},
+					'rgb(89, 13, 226)': {
+						iconColor: '#ff2727',
+						afterColor: 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)',
+						logo: ASSETS.logoHome,
+					},
+					'rgb(1, 1, 1)': {
+						iconColor: '#ff2727',
+						afterColor: 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)',
+						logo: ASSETS.logoHome,
+					},
+					default: {
+						iconColor: '#2c1349',
+						afterColor: '#2c1349',
+						logo: null, // No change for default case
+					},
+				};
+
+				// DOM elements
+				const elements = {
+					banner: document.querySelector(SELECTORS.banner),
+					navItems: document.querySelectorAll(SELECTORS.navItems),
+					logo: document.querySelector(SELECTORS.logo),
+					burger: document.querySelector(SELECTORS.burger),
+				};
 
 				// Early return if essential elements are missing
-				if (!banner || navItems.length === 0 || !headerLogo || !headerBurger) return;
+				if (!elements.banner || elements.navItems.length === 0 || !elements.logo || !elements.burger) {
+					return;
+				}
 
-				// Create style element once (outside the update function)
+				// Cache burger elements once
+				elements.burgerLines = {
+					line1: elements.burger.querySelector('.line-1'),
+					line2: elements.burger.querySelector('.line-2'),
+				};
+
+				// Create style element once
 				const styleElement = document.createElement('style');
 				document.head.appendChild(styleElement);
 
-				// URLs defined as constants to avoid repetition
-				const LOGO_DARK_URL = 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-inverted.svg';
-				const LOGO_HOME_URL =
-					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg';
+				// Update UI based on banner background color
+				function updateUI() {
+					const bannerBgColor = elements.banner.style.backgroundColor;
+					const colorScheme = COLOR_MAPS[bannerBgColor] || COLOR_MAPS.default;
 
-				// Cache burger elements
-				const burgerLine1 = headerBurger.querySelector('.line-1');
-				const burgerLine2 = headerBurger.querySelector('.line-2');
-
-				function updateTextColor() {
-					const bannerBgColor = banner.style.backgroundColor;
-
-					let iconColor;
-					let afterColor;
-
-					switch (colorType) {
-						case bannerBgColor = 'rgb(251, 15, 1)':
-							iconColor = '#ffffff';
-							afterColor = iconColor;
-							headerLogo.style.background = `url(${LOGO_DARK_URL}) no-repeat`;
-							if (burgerLine1) burgerLine1.style.background = iconColor;
-							if (burgerLine2) burgerLine2.style.background = iconColor;
-							break;
-
-            case bannerBgColor = 'rgb(89, 13, 226)':
-            case bannerBgColor = 'rgb(1,1,1)':
-							iconColor = '#ff2727';
-							afterColor = 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)';
-							headerLogo.style.background = `url(${LOGO_HOME_URL}) no-repeat`;
-							if (burgerLine1) burgerLine1.style.background = iconColor;
-							if (burgerLine2) burgerLine2.style.background = iconColor;
-							break;
-
-						default: // White or any other color
-							iconColor = '#2c1349';
-							afterColor = iconColor;
-							break;
+					// Update logo if needed
+					if (colorScheme.logo) {
+						elements.logo.style.background = `url(${colorScheme.logo}) no-repeat`;
 					}
 
-					// Update CSS variables in one go via the style element
+					// Update burger lines if they exist
+					if (elements.burgerLines.line1) {
+						elements.burgerLines.line1.style.background = colorScheme.iconColor;
+					}
+
+					if (elements.burgerLines.line2) {
+						elements.burgerLines.line2.style.background = colorScheme.iconColor;
+					}
+
+					// Update CSS variables in one go
 					styleElement.textContent = `
         .header__nav-item a::before {
-          color: ${iconColor} !important;
+          color: ${colorScheme.iconColor} !important;
         }
         .header__nav-item a::after {
-          background: ${afterColor} !important;
+          background: ${colorScheme.afterColor} !important;
         }
       `;
 				}
 
 				// Initial update
-				updateTextColor();
+				updateUI();
 
 				// Set up a MutationObserver to detect changes in the banner's inline style
-				const observer = new MutationObserver(updateTextColor);
-				observer.observe(banner, {
+				const observer = new MutationObserver(updateUI);
+				observer.observe(elements.banner, {
 					attributes: true,
 					attributeFilter: ['style'],
 				});
