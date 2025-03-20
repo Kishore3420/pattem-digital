@@ -4386,7 +4386,7 @@
 				document.head.appendChild(styleElement);
 
 				// URLs defined as constants to avoid repetition
-				const LOGO_DARK_URL = 'assets/home-page/logo-dark.svg';
+				const LOGO_DARK_URL = 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-inverted.svg';
 				const LOGO_HOME_URL =
 					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/logo-home.svg';
 
@@ -4395,28 +4395,13 @@
 				const burgerLine2 = headerBurger.querySelector('.line-2');
 
 				function updateTextColor() {
-					const bannerBgColor = getComputedStyle(banner).backgroundColor;
+					const bannerBgColor = banner.style.backgroundColor;
 
 					let iconColor;
 					let afterColor;
 
-					// Helper function to determine color type
-					function getColorType(bgColor) {
-						if (bgColor.includes('251, 15, 1') || bgColor.includes('rgb(251, 15, 1)')) {
-							return 'red';
-						} else if (bgColor.includes('1, 1, 1')) {
-							return 'black';
-						} else if (bgColor.includes('89, 13, 226')) {
-							return 'purple';
-						} else {
-							return 'default';
-						}
-					}
-
-					const colorType = getColorType(bannerBgColor);
-
 					switch (colorType) {
-						case 'red':
+						case bannerBgColor = 'rgb(251, 15, 1)':
 							iconColor = '#ffffff';
 							afterColor = iconColor;
 							headerLogo.style.background = `url(${LOGO_DARK_URL}) no-repeat`;
@@ -4424,8 +4409,8 @@
 							if (burgerLine2) burgerLine2.style.background = iconColor;
 							break;
 
-						case 'black':
-						case 'purple':
+            case bannerBgColor = 'rgb(89, 13, 226)':
+            case bannerBgColor = 'rgb(1,1,1)':
 							iconColor = '#ff2727';
 							afterColor = 'linear-gradient(to bottom, #ff2727 0, #ff7e31 100%)';
 							headerLogo.style.background = `url(${LOGO_HOME_URL}) no-repeat`;
