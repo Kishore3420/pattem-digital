@@ -4019,9 +4019,11 @@
 			src="https://pattemdigital.com/production/wp-content/plugins/wp-customization/resources/js/wpc_theme.js?ver=1610141043"
 			id="wpc_template_action-js"
 		></script>
+	
 
 		<script type="module">
-			const caseStudiesData = [
+			import { MegaMenu, Footer, Testimonials, Faq, Banner, GetInsights, CaseStudies } from './js/index.min.js';
+      const caseStudiesData = [
 				{
 					title: 'The future of health care',
 					description:
@@ -4082,10 +4084,6 @@
 					altText: 'Banking app dashboard showing account overview and transaction history',
 				},
 			];
-		</script>
-
-		<script type="module">
-			import { MegaMenu, Footer, Testimonials, Faq, Banner, GetInsights, CaseStudies } from './js/index.min.js';
 
 			document.addEventListener('DOMContentLoaded', function (event) {
 				new MegaMenu();
