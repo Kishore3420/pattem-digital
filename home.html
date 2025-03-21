@@ -104,12 +104,6 @@
 				font-display: swap;
 			}
 
-			.animate-fade-in {
-				animation: fadeIn 0.8s ease-in-out;
-				will-change: opacity, transform;
-				display: inline-block; /* Ensures the animation applies properly */
-			}
-
 			.brand-tagline {
 				transition: opacity 0.5s ease;
 				opacity: 1;
@@ -143,20 +137,6 @@
 			.swiper-wrapper {
 				will-change: transform;
 				contain: layout;
-			}
-
-			/* Responsive optimizations */
-			@media (max-width: 768px) {
-				.animate-fade-in {
-					animation-duration: 0.5s; /* Faster animation on mobile for performance */
-				}
-			}
-
-			/* Reduce animations for users who prefer reduced motion */
-			@media (prefers-reduced-motion: reduce) {
-				.animate-fade-in {
-					animation: none;
-				}
 			}
 		</style>
 
@@ -304,13 +284,6 @@
 
 	<body
 		class="home page-template-default page page-id-4 intro-active home-active"
-		onselectstart="return false"
-		onselectstart="return false"
-		oncut="return false"
-		oncopy="return false"
-		onpaste="return false"
-		ondrag="return false"
-		ondrop="return false"
 	>
 		<!-- Loader overlay - shows while the page loads -->
 		<div class="loader-overlay" id="loader">
@@ -343,8 +316,8 @@
 						></a>
 						<span class="p1 biline">Digital Studio</span>
 					</div>
-					<div id="mega__menu">
-						<nav class="header__nav">
+					<nav id="mega__menu">
+						<div class="header__nav">
 							<ul class="header__nav-list">
 								<li class="header__nav-item">
 									<a id="aboutus__dropdown" href="https://pattemdigital.com/about-us/">About Us</a>
@@ -1607,8 +1580,8 @@
 								<span class="line-1"></span>
 								<span class="line-2"></span>
 							</a>
-						</nav>
-					</div>
+						</div>
+					</nav>
 				</div>
 			</header>
 			<!-- site-menu -->
@@ -1732,10 +1705,6 @@
 							<div class="pt-banner__wrapper">
 								<div class="pt-banner__context pt-banner__content">
 									<div class="pt-banner__text-block">
-										<!-- LCP Element - Made accessible and optimized -->
-										<!-- <span class="brand-tagline animate-fade-in" id="main-tagline"
-											>We are collaboration for
-										</span> -->
 										<div
 											class="swiper"
 											data-direction="vertical"
