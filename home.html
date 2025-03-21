@@ -99,25 +99,12 @@
 			}
 
 			.brand-tagline {
-				transition: transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease;
 				transform: translateY(0);
-				opacity: 1;
 			}
 
 			.brand-tagline.transitioning {
-				transform: translateY(20px); /* Start position (bottom) */
-				opacity: 0;
-			}
-
-			@keyframes fadeIn {
-				0% {
-					opacity: 0;
-					transform: translateY(20px);
-				}
-				100% {
-					opacity: 1;
-					transform: translateY(0);
-				}
+				transform: translateY(40px); /* Start position (bottom) */
 			}
 
 			.pt-banner img {
