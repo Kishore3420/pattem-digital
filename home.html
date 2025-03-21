@@ -110,6 +110,15 @@
 				display: inline-block; /* Ensures the animation applies properly */
 			}
 
+			.brand-tagline {
+				transition: opacity 0.5s ease;
+				opacity: 1;
+			}
+
+			.brand-tagline.transitioning {
+				opacity: 0;
+			}
+
 			@keyframes fadeIn {
 				0% {
 					opacity: 0;
@@ -1724,10 +1733,7 @@
 								<div class="pt-banner__context pt-banner__content">
 									<div class="pt-banner__text-block">
 										<!-- LCP Element - Made accessible and optimized -->
-										<!-- <span
-											class="brand-tagline animate-fade-in"
-											data-direction="vertical"
-											id="main-tagline"
+										<!-- <span class="brand-tagline animate-fade-in" id="main-tagline"
 											>We are collaboration for
 										</span> -->
 										<div
@@ -1745,6 +1751,7 @@
 													data-title="We are collaboration for"
 													data-logo="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/icon/pattem digital client Adobe logo icon.svg"
 													data-description="We push design, creativity and user experience with our innovative cutting edge tech solutions."
+													data-tagline="We are collaboration for"
 													data-background-color="#FB0F01"
 													aria-roledescription="slide"
 													aria-label="Adobe"
@@ -1756,13 +1763,6 @@
 														height="50"
 														fetchpriority="high"
 													/>
-
-													<span
-														class="brand-tagline animate-fade-in"
-														data-direction="vertical"
-														id="main-tagline"
-														>
-													</span>
 												</div>
 												<div
 													class="swiper-slide"
@@ -1773,6 +1773,7 @@
 													data-background-color="#590de2"
 													aria-roledescription="slide"
 													aria-label="Builder.ai"
+													data-tagline="Shaping Agile App Development"
 												>
 													<img
 														src="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/client/Pattem client banner logo Builder ai.svg"
@@ -1791,6 +1792,7 @@
 													data-background-color="#010101"
 													aria-roledescription="slide"
 													aria-label="Legrand"
+													data-tagline="Elevating Smart Solutions"
 												>
 													<img
 														src="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/client/Pattem client banner logo legrand.svg"
