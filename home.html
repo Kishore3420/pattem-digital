@@ -98,10 +98,15 @@
 				pointer-events: none;
 			}
 
-			.brand-tagline,
-			.brand-description,
-			.pt-banner__text-block__details-cta {
-				font-display: swap;
+			.brand-tagline {
+				transition: transform 0.5s ease, opacity 0.5s ease;
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+			.brand-tagline.transitioning {
+				transform: translateY(20px); /* Start position (bottom) */
+				opacity: 0;
 			}
 
 			@keyframes fadeIn {
@@ -273,9 +278,7 @@
 		</script>
 	</head>
 
-	<body
-		class="home page-template-default page page-id-4 intro-active home-active"
-	>
+	<body class="home page-template-default page page-id-4 intro-active home-active">
 		<!-- Loader overlay - shows while the page loads -->
 		<div class="loader-overlay" id="loader">
 			<div class="spinner"></div>
