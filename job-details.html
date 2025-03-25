@@ -3066,11 +3066,36 @@
 				</div>
 			</footer>
 			<!--/ footer -->
+
+      <div class="video-record-container"></div>
 		</main>
 		<script
 			type="text/javascript"
 			src="https://pattemdigital.com/devp/src/scripts/_header.js"
 			id="header.jquery-js"
 		></script>
+
+    <script type="module">
+      import { VideoRecordComponent } from './js/index.min.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+            // Initialize the Video Record Component
+            new VideoRecordComponent({
+                containerSelector: '.video-record-container',
+                buttonText: 'Record Your Video',
+                bannerTitle: 'Create Your Video Resume',
+                maxRecordingTime: 120, // 2 minutes
+                storageKey: 'videoResume',
+                onSave: (videoBlob) => {
+                    console.log('Video saved:', videoBlob);
+                    // Additional save logic if needed
+                },
+                onClose: () => {
+                    console.log('Modal closed');
+                }
+            });
+        });
+
+    </script>
 	</body>
 </html>
