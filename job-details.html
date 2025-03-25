@@ -140,6 +140,52 @@
 			href="https://pattemdigital.com/staging/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpattemdigital.com%2Fstaging%2Fmega-menu%2F&#038;format=xml"
 		/>
 		<link rel="stylesheet" id="pattem-menu-css" href="./css/pt-ui.css" type="text/css" media="all" />
+    <style>
+      /* Basic styling for the component */
+      .video-record-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000;
+      }
+
+      .video-record-modal-content {
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          max-width: 500px;
+          width: 100%;
+      }
+
+      .video-record-preview {
+          max-width: 100%;
+          max-height: 300px;
+      }
+
+      .video-record-preview-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2000;
+      }
+
+      .video-record-preview-modal video {
+          max-width: 90%;
+          max-height: 90%;
+      }
+  </style>
 	</head>
 
 	<body class="page-template page-template-template-menu page-template-template-menu-php page page-id-49654">
