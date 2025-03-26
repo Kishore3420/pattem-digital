@@ -2287,11 +2287,12 @@
 																type="text"
 																name="firstName"
 																pt-validate="required"
+                                id="firstName"
 															/>
 														</div>
 														<div class="pt-input-field">
 															<label class="pt-input-field__label">Last Name*</label>
-															<input type="text" name="lastName" pt-validate="required" />
+															<input type="text" name="lastName" pt-validate="required" id="lastName" />
 														</div>
 													</div>
 													<div class="pt-input-group">
@@ -2301,6 +2302,7 @@
 																type="email"
 																name="email"
 																pt-validate="required|email"
+                                id="email"
 															/>
 														</div>
 														<div class="pt-input-field">
@@ -2309,6 +2311,7 @@
 																type="text"
 																name="phoneNumber"
 																pt-validate="required"
+                                id="phone"
 															/>
 														</div>
 													</div>
@@ -2356,6 +2359,7 @@
 															class="pt-inputfile form-control"
 															name="attachments"
 															pt-validate="file_required|fileType"
+                              id="resumeFile"
 														/>
 														<div class="pt-file-upload__file-list"></div>
 														<span pt-error-message="file_required" class="pt-error-message"
