@@ -52,20 +52,6 @@
   <link rel="alternate" type="text/xml+oembed"
     href="https://pattemdigital.com/staging/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpattemdigital.com%2Fstaging%2Fmega-menu%2F&#038;format=xml" />
   <link rel="stylesheet" id="pattem-menu-css" href="./css/pt-ui.css" type="text/css" media="all" />
-
-  <style>
-    input[type="file"]#resumeFile {
-      display: none;
-    }
-
-    .label-resumeFile {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 21px;
-      padding: 12px 16px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 <body class="page-template page-template-template-menu page-template-template-menu-php page page-id-49654">
@@ -1448,11 +1434,10 @@
                             <div class="pt-import-from__hoverlay"></div>
                             <ul>
                               <li>
-                                <label for="resumeFile" class="label-resumeFile">
+                                <label for="resumeFile" class="label-resumeFile" style="cursor: pointer;">
                                   My Computer
                                 </label>
-                                <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" />
-                                <input>My computer</input>
+                                <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display: none;" />
                               </li>
                               <li>Dropbox</li>
                               <li>Google drive</li>
@@ -2100,10 +2085,9 @@
       });
     });
   </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
   <script src="./job-details.js"></script>
-
-
 </body>
 
 </html>
