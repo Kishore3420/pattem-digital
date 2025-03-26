@@ -120,15 +120,15 @@ function autoFillForm(data) {
 
 }
 
-// Form submission handler
-document.getElementById('jobApplicationForm').addEventListener('submit', (e) => {
-	e.preventDefault();
+// // Form submission handler
+// document.getElementById('jobApplicationForm').addEventListener('submit', (e) => {
+// 	e.preventDefault();
 
-	// Collect form data
-	const formData = new FormData(e.target);
-	const applicationData = Object.fromEntries(formData.entries());
+// 	// Collect form data
+// 	const formData = new FormData(e.target);
+// 	const applicationData = Object.fromEntries(formData.entries());
 
-	// In a real-world scenario, you would send this data to a server
-	console.log('Submitted Application Data:', applicationData);
-	alert('Application submitted successfully!');
-});
+// 	// In a real-world scenario, you would send this data to a server
+// 	console.log('Submitted Application Data:', applicationData);
+// 	alert('Application submitted successfully!');
+// });
