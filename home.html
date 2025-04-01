@@ -169,6 +169,14 @@
 				document.head.appendChild(analyticsScript);
 			});
 		</script>
+
+    <style>
+      button.header__burger{
+        background: transparent;
+        border: 0;
+        height: fit-content;
+      }
+    </style>
 	</head>
 
 	<body class="home page-template-default page page-id-4 intro-active home-active">
@@ -1459,10 +1467,10 @@
 									</ul>
 								</li>
 							</ul>
-							<a href="#" class="header__burger" aria-label="Menu">
+							<button id="header__burger" class="header__burger" aria-label="Menu">
 								<span class="line-1"></span>
 								<span class="line-2"></span>
-							</a>
+							</button>
 						</div>
 					</nav>
 				</div>
@@ -1584,7 +1592,7 @@
 							id="_home_animation"
 							value="https://pattemdigital.com/production/wp-content/uploads/2019/02/latest-data.json"
 						/>
-            <section class="pt-banner pt-banner--home-banner" aria-label="Client showcase banner">
+						<section class="pt-banner pt-banner--home-banner" aria-label="Client showcase banner">
 							<div class="pt-banner__wrapper">
 								<div class="pt-banner__context pt-banner__content">
 									<div class="pt-banner__text-block">
@@ -4131,6 +4139,12 @@
 
 			// Run initialization when DOM is fully loaded
 			document.addEventListener('DOMContentLoaded', initializeApplication);
+		</script>
+
+		<script type="module">
+			document.getElementById('header__burger')?.addEventListener('click', () => {
+				document.body.classList.toggle('site-menu-active');
+			});
 		</script>
 	</body>
 </html>
