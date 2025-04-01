@@ -3846,11 +3846,6 @@
 		></script>
 		<script
 			type="text/javascript"
-			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_header.js?ver=1724716860"
-			id="header.jquery-js"
-		></script>
-		<script
-			type="text/javascript"
 			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_banner.js?ver=1724716860"
 			id="banner.jquery-js"
 		></script>
@@ -4143,6 +4138,7 @@
 
 		<script type="module">
 			document.getElementById('header__burger')?.addEventListener('click', () => {
+        console.log(`[DEBUG] Site Menu Changed`)
 				document.body.classList.toggle('site-menu-active');
 			});
 		</script>
