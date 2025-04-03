@@ -2127,33 +2127,79 @@ c-0.3-0.3-0.4-0.8-0.4-1.7c0-0.9,0.1-1.4,0.4-1.7c0.3-0.2,0.8-0.4,1.6-0.4C94,19.9,
 
 			import { locationAttributes, cardList, officeLocations } from './js/data.js';
 
-			// Initialize components
-			new MegaMenu();
-			new GlobalSearch({
-				selector: '.pt-global-search',
-			});
-			new GlobalMap({
-				selector: '.cmp-global-map',
-				title: 'Our Location',
-				caption: 'We have offices and teams all around the world',
-				locationAttributes: locationAttributes,
-				mapImageUrl: './assets/map.png',
-			});
-			new ReachUs({
-				selector: '.cmp-reach-us',
-			});
-			new ContactCards({
-				selector: '.pt-contactCards',
-				title: 'Hello!',
-				caption: 'We are here for you.',
-				cardList: cardList,
-			});
-			new OfficeLocation({
-				selector: '.pt-office__locations',
-				officeLocations: officeLocations,
-			});
-			new Footer({
-				selector: '.pt-footer',
+			// Font loading script - place at the end of your body tag
+			document.addEventListener('DOMContentLoaded', function () {
+				// Create a function to load fonts asynchronously
+				const loadFonts = () => {
+					// Create link for Poppins
+					const poppinsFont = document.createElement('link');
+					poppinsFont.href =
+						'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+					poppinsFont.rel = 'stylesheet';
+
+					// Create link for Material Icons
+					const materialIcons = document.createElement('link');
+					materialIcons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+					materialIcons.rel = 'stylesheet';
+
+					// Create link for Typekit
+					const typekit = document.createElement('link');
+					typekit.href = 'https://use.typekit.net/sak4oir.css';
+					typekit.rel = 'stylesheet';
+
+					// Add all links to the head
+					document.head.appendChild(poppinsFont);
+					document.head.appendChild(materialIcons);
+					document.head.appendChild(typekit);
+				};
+
+				// Check if the browser supports requestIdleCallback
+				if ('requestIdleCallback' in window) {
+					// Load fonts when the browser is idle
+					requestIdleCallback(loadFonts);
+				} else {
+					// Fallback for browsers that don't support requestIdleCallback
+					setTimeout(loadFonts, 1);
+				}
+
+				// Add font-display: swap in your CSS
+				const style = document.createElement('style');
+				style.textContent = `
+    @font-face {
+      font-family: 'Poppins';
+      font-display: swap;
+    }
+  `;
+				document.head.appendChild(style);
+
+				// Initialize components
+				new MegaMenu();
+				new GlobalSearch({
+					selector: '.pt-global-search',
+				});
+				new GlobalMap({
+					selector: '.cmp-global-map',
+					title: 'Our Location',
+					caption: 'We have offices and teams all around the world',
+					locationAttributes: locationAttributes,
+					mapImageUrl: './assets/map.png',
+				});
+				new ReachUs({
+					selector: '.cmp-reach-us',
+				});
+				new ContactCards({
+					selector: '.pt-contactCards',
+					title: 'Hello!',
+					caption: 'We are here for you.',
+					cardList: cardList,
+				});
+				new OfficeLocation({
+					selector: '.pt-office__locations',
+					officeLocations: officeLocations,
+				});
+				new Footer({
+					selector: '.pt-footer',
+				});
 			});
 		</script>
 	</body>
