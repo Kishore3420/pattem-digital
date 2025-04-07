@@ -4096,7 +4096,7 @@
 				try {
 					// Import components dynamically
 					import('./js/index.min.js')
-						.then(({ MegaMenu, Footer, Testimonials, Faq, Banner, CaseStudies }) => {
+						.then(({ MegaMenu, Footer, Testimonials, Faq, Banner, CaseStudies, GetInsights }) => {
 							// Initialize MegaMenu
 							new MegaMenu();
 
@@ -4130,6 +4130,21 @@
 							new CaseStudies({
 								selector: '.pt-case-studies',
 								caseStudies: caseStudiesData,
+							});
+							// Initialize Get Insights
+
+							new GetInsights({
+								selector: '.pt-get-insights__wrapper',
+								formSelector: '.pt-form',
+								skipSubmission: true,
+								onSuccess: (formData) => {
+									console.log('Form validation successful.');
+									console.log(formData);
+								},
+								onError: () => {
+									console.log('Form validation failed.');
+								},
+								identity: 'getInsights',
 							});
 						})
 						.catch((error) => {
