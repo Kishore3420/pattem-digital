@@ -98,14 +98,6 @@
 			rel="stylesheet"
 			href="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/icomoon/style.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			id="pattem-main-css"
-			href="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/main.css?conthash=20240827094712"
-			type="text/css"
-			media="all"
-		/>
 		<link rel="stylesheet" id="pattem-menu-css" href="./css/pt-ui.css" type="text/css" media="all" />
 		<script
 			type="text/javascript"
@@ -3902,8 +3894,93 @@
 				'Software Product Development Company',
 			];
 		</script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/client-lib.min.js?ver=1724716860"
+			id="client.lib-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/vendor/jquery.waypoints.min.js?ver=1724716860"
+			id="waypoints.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_helpers.js?ver=1724716860"
+			id="helpers.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_lazy-load.js?ver=1724716860"
+			id="lazyload.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_base.js?ver=1724716860"
+			id="base.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/vendor/aos.js?ver=1742169660"
+			id="aos.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_banner.js?ver=1724716860"
+			id="banner.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_cases.js?ver=1724716860"
+			id="cases.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_case-detail.js?ver=1724716860"
+			id="case.detail-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/vendor/jquery.range-min.js?ver=1724716860"
+			id="ranges.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_insights.js?ver=1724716860"
+			id="insights.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_services.js?ver=1724716860"
+			id="services.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/jquery.validate.min.js?ver=1724716860"
+			id="validate.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/additional-methods.min.js?ver=1724716860"
+			id="additional.validate.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_scripts.js?ver=1724716860"
+			id="theme.jquery-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/js/_process.js?ver=1724716860"
+			id="jquery.process-js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://pattemdigital.com/production/wp-content/plugins/wp-customization/resources/js/wpc_theme.js?ver=1610141043"
+			id="wpc_template_action-js"
+		></script>
 
-		<script type="module" defer>
+		<script type="module">
 			// Data for case studies
 			const caseStudiesData = [
 				{
@@ -4022,8 +4099,8 @@
 								identity: 'getInsights',
 							});
 
-              // Initialize Header
-              new Header()
+							// Initialize Header
+							new Header();
 						})
 						.catch((error) => {
 							console.error('Error loading components:', error);
@@ -4033,9 +4110,55 @@
 				}
 			}
 
-
 			// Run initialization when DOM is fully loaded
 			document.addEventListener('DOMContentLoaded', initializeComponents);
+		</script>
+		<script type="module" defer="">
+			// Font loading script - place at the end of your body tag
+			document.addEventListener('DOMContentLoaded', function () {
+				// Create a function to load fonts asynchronously
+				const loadFonts = () => {
+					// Create link for Poppins
+					const poppinsFont = document.createElement('link');
+					poppinsFont.href =
+						'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+					poppinsFont.rel = 'stylesheet';
+
+					// Create link for Material Icons
+					const materialIcons = document.createElement('link');
+					materialIcons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+					materialIcons.rel = 'stylesheet';
+
+					// Create link for Typekit
+					const typekit = document.createElement('link');
+					typekit.href = 'https://use.typekit.net/sak4oir.css';
+					typekit.rel = 'stylesheet';
+
+					// Add all links to the head
+					document.head.appendChild(poppinsFont);
+					document.head.appendChild(materialIcons);
+					document.head.appendChild(typekit);
+				};
+
+				// Check if the browser supports requestIdleCallback
+				if ('requestIdleCallback' in window) {
+					// Load fonts when the browser is idle
+					requestIdleCallback(loadFonts);
+				} else {
+					// Fallback for browsers that don't support requestIdleCallback
+					setTimeout(loadFonts, 1);
+				}
+
+				// Add font-display: swap in your CSS
+				const style = document.createElement('style');
+				style.textContent = `
+          @font-face {
+            font-family: 'Poppins';
+            font-display: swap;
+          }
+        `;
+				document.head.appendChild(style);
+			});
 		</script>
 	</body>
 </html>
