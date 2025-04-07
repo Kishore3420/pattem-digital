@@ -170,13 +170,13 @@
 			});
 		</script>
 
-    <style>
-      button.header__burger{
-        background: transparent;
-        border: 0;
-        height: fit-content;
-      }
-    </style>
+		<style>
+			button.header__burger {
+				background: transparent;
+				border: 0;
+				height: fit-content;
+			}
+		</style>
 	</head>
 
 	<body class="home page-template-default page page-id-4 intro-active home-active">
@@ -2581,6 +2581,94 @@
 							<!-- Case studies start -->
 							<section class="pt-case-studies" aria-label="Case Studies"></section>
 							<!-- Case studies end -->
+							<!-- Get Insights Section Start -->
+							<section class="pt-get-insights">
+								<div class="pt-get-insights__wrapper pt-container">
+									<div class="pt-get-insights__container">
+										<form class="pt-form">
+											<h2 class="pt-get-insights__title">Get insights</h2>
+											<p class="pt-get-insights__description">
+												From the experts on building and scaling technology teams.
+											</p>
+											<div class="pt-get-insights__form-box">
+												<div class="pt-get-insights__form-wrapper">
+													<div class="pt-form__section">
+														<div class="pt-input-group">
+															<div class="pt-input-group pt-input-group--column">
+																<div class="pt-input-field">
+																	<input
+																		type="text"
+																		name="name"
+																		pt-validate="required"
+																		placeholder="Name *"
+																	/>
+																</div>
+																<div class="pt-input-field">
+																	<input
+																		type="text"
+																		name="email"
+																		pt-validate="required"
+																		placeholder="Email *"
+																	/>
+																</div>
+															</div>
+															<div class="pt-input-field">
+																<textarea
+																	type="text"
+																	name="message"
+																	placeholder="Message *"
+																	pt-validate="required"
+																></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pt-get-insights__contacts">
+												<div class="pt-get-insights__contact">
+													<h4 class="pt-get-insights__contact__title">New business</h4>
+													<p class="pt-get-insights__contact__description">
+														Are you a disruptor with an ambitious project? Get in touch and
+														work with us.
+													</p>
+													<span class="pt-get-insights__contact__email"
+														>hello@pattemdigital.com</span
+													>
+												</div>
+												<div class="pt-get-insights__contact">
+													<h4 class="pt-get-insights__contact__title">Careers</h4>
+													<p class="pt-get-insights__contact__description">
+														Are you a disruptor with an ambitious project? Get in touch and
+														work with us.
+													</p>
+													<span class="pt-get-insights__contact__email"
+														>careers@pattemdigital.com</span
+													>
+												</div>
+												<div class="pt-get-insights__contact">
+													<h4 class="pt-get-insights__contact__title">
+														General Inquiries &amp; Press
+													</h4>
+													<p class="pt-get-insights__contact__description">
+														Are you a disruptor with an ambitious project? Get in touch and
+														work with us.
+													</p>
+													<span class="pt-get-insights__contact__email"
+														>hello@pattemdigital.com</span
+													>
+												</div>
+											</div>
+											<button
+												type="submit"
+												class="pt-get-insights__get-in-tocuh-cta btn btn--primary btn--outlined btn--lg"
+											>
+												Get In Touch
+											</button>
+										</form>
+									</div>
+								</div>
+							</section>
+							<!-- Get Insights Section End -->
 							<!-- Our stories start section -->
 							<section class="pt-our-stories" aria-labelledby="stories-heading">
 								<div class="pt-our-stories__wrapper pt-container">
@@ -4138,7 +4226,7 @@
 
 		<script type="module">
 			document.getElementById('header__burger')?.addEventListener('click', () => {
-        console.log(`[DEBUG] Site Menu Changed`)
+				console.log(`[DEBUG] Site Menu Changed`);
 				document.body.classList.toggle('site-menu-active');
 			});
 		</script>
