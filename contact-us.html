@@ -1954,7 +1954,7 @@ c-0.3-0.3-0.4-0.8-0.4-1.7c0-0.9,0.1-1.4,0.4-1.7c0.3-0.2,0.8-0.4,1.6-0.4C94,19.9,
       Footer,
     } from './js/index.min.js';
 
-    import { locationAttributes, cardList, officeLocations } from './js/data.js';
+    import { locationAttributes, cardList, officeLocations, inputElements,textAreaElements } from './js/data.js';
 
     // Font loading script - place at the end of your body tag
     document.addEventListener('DOMContentLoaded', function () {
@@ -2020,8 +2020,14 @@ c-0.3-0.3-0.4-0.8-0.4-1.7c0-0.9,0.1-1.4,0.4-1.7c0.3-0.2,0.8-0.4,1.6-0.4C94,19.9,
         mapImageUrl: './assets/images/map.webp',
       });
       new ReachUs({
-        selector: '.cmp-reach-us',
-      });
+					selector: '.cmp-reach-us',
+					inputElements: inputElements,
+          textAreaElements: textAreaElements,
+          apiEndpoint: 'https://pattemdigital.com/api/',
+          accessKey: 'pattem-api',
+          successMessage: 'Awesome, Your message sent successfully! Our team will get in touch with you shortly.',
+          errorMessage: 'Oh oh, Message not sent, please try after sometime.'
+				});
       new ContactCards({
         selector: '.pt-contactCards',
         title: 'Hello!',

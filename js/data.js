@@ -56,7 +56,6 @@ export const locationAttributes = [
     }
   }
 ]
-
 export const 	cardList = [
   {
     title: 'Join our team',
@@ -83,7 +82,6 @@ export const 	cardList = [
     iconImg: '../assets/images/thumb.svg',
   },
 ]
-
 export const officeLocations  = [
   {
     countryName: 'India',
@@ -156,3 +154,45 @@ export const officeLocations  = [
     isLoadMore: false
   },
 ]
+export const inputElements = [
+	{
+		labelText: 'Name',
+		id: 'name',
+		type: 'text',
+		name: 'Name',
+		minLength: 2,
+		placeholder: 'Enter your name',
+		isRequired: true,
+		errorMessage: 'Please enter a valid name',
+	},
+	{
+		labelText: 'Email',
+		id: 'email',
+		type: 'email',
+		name: 'Email',
+		minLength: 5,
+		placeholder: 'Enter your email address',
+		isRequired: true,
+		errorMessage: 'Please enter a valid email address',
+	},
+	{
+		labelText: 'Phone',
+		id: 'phone',
+		type: 'tel',
+		name: 'Phone',
+		minLength: 10,
+		placeholder: 'Enter your phone number',
+		isRequired: true,
+		errorMessage: 'Please enter a valid phone number',
+	},
+];
+export const textAreaElements = [
+	{
+		labelText: 'Comments',
+		id: 'comments',
+		name: 'Comments',
+		placeholder: 'How can we help you?',
+		isRequired: true,
+		errorMessage: 'Please enter your message',
+	},
+];
