@@ -3,7 +3,7 @@ export const locationAttributes = [
 		country: 'India',
 		branch: 'Bengaluru',
 		address:
-			'No.293/154/174, 4th Floor, Indiqube Gamma Building, Outer Ring Rd, Opposite to JP Morgan, Bangalore, Karnataka 560103',
+			'2nd Floor, BHIVE, Jbr Tech Park, Plot No. 77, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066',
 		position: {
 			top: '53.7',
 			left: '70.55',
@@ -11,74 +11,125 @@ export const locationAttributes = [
 	},
 	{
 		country: 'India',
+		branch: 'Hyderabad',
+		address:
+			'Building Number 9, Raheja Mindspace Madhapur It Park, Mindspace Madhapur Rd, Huda Techno Enclave, Hitech City, Hyderabad, Telangana 500079',
+		position: {
+			left: '70.5',
+			top: '50.0',
+		},
+	},
+	{
+		country: 'India',
+		branch: 'Pune',
+		address: 'WeWork Amanora Crest, Amanora Park Town, Hadapsar, Pune, Maharashtra 411028',
+		phoneNumber: '+91-9901337558',
+		position: {
+			left: '69.5',
+			top: '49.1',
+		},
+	},
+	{
+		country: 'India',
 		branch: 'Chennai',
-		address: 'No.293/154/172, Outer Ring Road, 4th Floor, Kadubeeansahalli, Chennai, Tamilnadu 560103.',
+		address:
+			'WeWork Olympia Cyberspace, Arulayiammanpet, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032',
 		position: {
 			top: '52.75',
 			left: '71.5',
 		},
 	},
 	{
-		country: 'USA',
-		branch: 'San Jose',
-		address: '240 E Gish Rd, Sandy, CA 95112',
+		country: 'United States',
+		branch: 'San Francisco',
+		address:
+			'505 Montgomery Street, 10th & 11th floors, San Francisco, California, 94111, United States of America',
 		position: {
 			top: '41.45',
 			left: '11.75',
 		},
 	},
 	{
-		country: 'USA',
-		branch: 'Sandy',
-		address: '240 E Gish Rd, San Jose, CA 95112 ',
-		position: {
-			top: '32.9',
-			left: '14.58',
-		},
-	},
-	{
 		country: 'Singapore',
-		branch: 'Banta Tengeh',
-		address: 'No.293/154/172, Outer Ring Road, 4th Floor, Kadubeeansahalli, Banta Tengeh, Singapore 560103.',
+		branch: 'Changi City',
+		address: '51 Changi Business Park Central 2, Level 04-05 The Signature, Singapore 486066',
 		position: {
 			top: '62.25',
 			left: '77.05',
 		},
 	},
 	{
-		country: 'Singapore',
-		branch: 'Chia Keng',
-		address: 'No.293/154/172, Outer Ring Road, 4th Floor, Kadubeeansahalli, Chia Keng, Singapore 560103.',
+		country: 'India',
+		branch: 'Mumbai',
+		address:
+			'WeWork Raheja Platinum, Rd, off Andheri - Kurla Road, Sag Baug, Marol, Andheri East, Mumbai, Maharashtra 400059',
 		position: {
-			top: '63.25',
-			left: '78',
+			left: '68.6',
+			top: '49.9',
+		},
+	},
+	{
+		country: 'India',
+		branch: 'Noida',
+		address: 'Plot No.C, WeWork Berger Delhi One C, Sector 16B, Noida, Uttar Pradesh 201301',
+		position: {
+			left: '71.5',
+			top: '47.1',
+		},
+	},
+  {
+		country: 'Australia',
+		branch: 'Syndney',
+		address: '1 Denison St,, North Sydney, New South Wales, 2060, Australia',
+		position: {
+			left: '85.45',
+			top: '78.25',
+		},
+	},
+  {
+		country: 'United Kingdom',
+		branch: 'Staines',
+		address: 'Rourke House, Watermans Business Park, The Causeway, Staines, TW18 3BA, United Kingdom',
+		position: {
+			left: '50',
+			top: '29',
+		},
+	},
+  {
+		country: 'Ireland',
+		branch: 'Dublin',
+		address: 'Regus Block 1, Blanchardstown Corporate Park, Ballycoolen Road, Blanchardstown, DUBLIN (IE), D15 AKK1, Republic of Ireland.',
+		position: {
+			left: '52',
+			top: '29',
 		},
 	},
 ];
+
 export const cardList = [
 	{
 		title: 'Join our team',
 		contact: 'HR Team | +91-9008862428',
 		email: 'work@pattemdigital.com',
-		iconImg: '../assets/images/profile.svg',
+		iconImg: 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/profile.svg',
 	},
 	{
 		title: 'Project Enquiry',
 		contact: 'Board-line | +91-9901337558',
 		email: 'business@pattemdigital.com',
-		iconImg: '../assets/images/message.svg',
+		iconImg: 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/message.svg',
 	},
 	{
 		title: 'Vendor Enquiry',
 		contact: 'Board-line | +91-9901337558',
 		email: 'marketing@pattemdigital.com',
-		iconImg: '../assets/images/enquiry.svg',
+		iconImg: 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/enquiry.svg',
 	},
 	{
 		title: 'Everything else',
 		contact: 'Board-line | +91-9901337558',
 		email: 'hello@pattemdigital.com',
-		iconImg: '../assets/images/thumb.svg',
+		iconImg: 'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/thumb.svg',
 	},
 ];
 export const officeLocations = [
@@ -88,66 +139,124 @@ export const officeLocations = [
 			{
 				name: 'Bangalore',
 				address:
-					'No.293/154/174, 4th Floor, Indiqube Gamma Building, Outer Ring Rd, Opposite to JP Morgan, Bangalore, Karnataka 560103 ',
+					'2nd Floor, BHIVE, Jbr Tech Park, Plot No. 77, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066',
 				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./data=!4m2!3m1!1s0x0:0x539a677a70c61407?sa=X&ved=1t:2428&ictx=111',
 				gallery: [
-					'../assets/images/gallery1.png',
-					'../assets/images/nodejs.png',
-					'../assets/images/youtube.png',
-					'../assets/images/mern.png',
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/gallery1.png',
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/nodejs.png',
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/youtube.png',
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/mern.png',
 				],
 			},
 			{
-				name: 'Chennai',
-				address: 'No.293/154/172, Outer Ring Road, 4th Floor, Kadubeeansahalli, Chennai, Tamilnadu 560103.',
-				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
-				gallery: ['../assets/images/youtube.png', '../assets/images/mern.png'],
-			},
-			{
-				name: 'Bangalore',
+				name: 'Hyderabad',
 				address:
-					'No.293/154/174, 4th Floor, Indiqube Gamma Building, Outer Ring Rd, Opposite to JP Morgan, Bangalore, Karnataka 560103 ',
+					'Building Number 9, Raheja Mindspace Madhapur It Park, Mindspace Madhapur Rd, Huda Techno Enclave, Hitech City, Hyderabad, Telangana 500079',
 				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./data=!4m2!3m1!1s0x0:0xa050d8586de496e5?sa=X&ved=1t:2428&ictx=111',
+				gallery: [
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/youtube.png',
+					'https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/mern.png',
+				],
+			},
+			{
+				name: 'Pune',
+				address: 'WeWork Amanora Crest, Amanora Park Town, Hadapsar, Pune, Maharashtra 411028',
+				phoneNumber: '+91-9901337558',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./@18.5205306,73.9399648,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c3ee2375ec1d:0xf3582d68777ce05e!8m2!3d18.5205306!4d73.9399648!16s%2Fg%2F11y7d3f0jm?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D',
+			},
+			{
+				name: 'Noida',
+				address: 'Plot No.C, WeWork Berger Delhi One C, Sector 16B, Noida, Uttar Pradesh 201301',
+				phoneNumber: '+91-9901337558',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./data=!4m2!3m1!1s0x0:0x6dc70a1a53b1e0fc?sa=X&ved=1t:2428&ictx=111',
+			},
+			{
+				name: 'Mumbai',
+				address:
+					'WeWork Raheja Platinum, Rd, off Andheri - Kurla Road, Sag Baug, Marol, Andheri East, Mumbai, Maharashtra 400059',
+				phoneNumber: '+91-9901337558',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./@19.1089215,72.8853493,17z/data=!4m14!1m7!3m6!1s0x3be7c9d9aca98dd3:0x99a122560b983faf!2sPattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud.!8m2!3d19.1089215!4d72.8853493!16s%2Fg%2F11w9hhtlzz!3m5!1s0x3be7c9d9aca98dd3:0x99a122560b983faf!8m2!3d19.1089215!4d72.8853493!16s%2Fg%2F11w9hhtlzz?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D',
 			},
 			{
 				name: 'Chennai',
-				address: 'No.293/154/172, Outer Ring Road, 4th Floor, Kadubeeansahalli, Chennai, Tamilnadu 560103.',
-				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
-			},
-			{
-				name: 'Bangalore',
 				address:
-					'No.293/154/174, 4th Floor, Indiqube Gamma Building, Outer Ring Rd, Opposite to JP Morgan, Bangalore, Karnataka 560103 ',
+					'WeWork Olympia Cyberspace, Arulayiammanpet, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032',
 				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+-+UX%2FUI+Design+Research,+Web+and+Mobile+App,+CMS,+ROR,+AEM,+Sitecore,+AI,+Cloud./data=!4m2!3m1!1s0x0:0x1348903b95b4c860?sa=X&ved=1t:2428&ictx=111',
 			},
 		],
 		isLoadMore: false,
 	},
 	{
-		countryName: 'USA',
+		countryName: 'United Kingdom',
 		locations: [
 			{
-				name: 'Sandy',
-				address: '240 E Gish Rd, Sandy, CA 95112 ',
-				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				name: 'United Kingdom',
+				address: 'Rourke House, Watermans Business Park, The Causeway, Staines, TW18 3BA, United Kingdom',
+				phoneNumber: '+1-6288007789',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital/data=!4m2!3m1!1s0x0:0x61add38909e66afd?sa=X&ved=1t:2428&hl=en&ictx=111&cshid=1738808265016277',
 			},
+		],
+		isLoadMore: false,
+	},
+	{
+		countryName: 'Australia',
+		locations: [
 			{
-				name: 'San Jose',
-				address: '240 E Gish Rd, San Jose, CA 95112 ',
-				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				name: 'North Sydney',
+				address: '1 Denison St,, North Sydney, New South Wales, 2060, Australia',
+				phoneNumber: '+1-6288007789',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+Technologies/@-33.8380826,151.2081948,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12afc3c03e9d65:0x7200a5e0a667d7e9!8m2!3d-33.8380826!4d151.2081948!16s%2Fg%2F11ybvlmlj6?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D',
 			},
+		],
+		isLoadMore: false,
+	},
+	{
+		countryName: 'Ireland',
+		locations: [
 			{
-				name: 'San Jose',
-				address: '240 E Gish Rd, San Jose, CA 95112 ',
-				phoneNumber: '+91-9901337558',
-				googleLocation: '#',
+				name: 'Dublin',
+				address:
+					'Regus Block 1, Blanchardstown Corporate Park, Ballycoolen Road, Blanchardstown, DUBLIN (IE), D15 AKK1, Republic of Ireland.',
+				phoneNumber: '+1-6288007789',
+				googleLocation: 'https://maps.app.goo.gl/Ew7zMCF3uwZoXEDd6',
+			},
+		],
+		isLoadMore: false,
+	},
+	{
+		countryName: 'United States',
+		locations: [
+			{
+				name: 'San Francisco',
+				address:
+					'505 Montgomery Street, 10th & 11th floors, San Francisco, California, 94111, United States of America',
+				phoneNumber: '+1-6288007789',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+Technologies+Inc./@37.7939112,-122.4033221,17z/data=!3m1!4b1!4m6!3m5!1s0x80858101fd7e995b:0xb536df9ca90796be!8m2!3d37.7939112!4d-122.4033221!16s%2Fg%2F11x1qtgnqz?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D',
+			},
+		],
+		isLoadMore: false,
+	},
+	{
+		countryName: 'Singapore',
+		locations: [
+			{
+				name: 'Changi City',
+				address: '51 Changi Business Park Central 2, Level 04-05 The Signature, Singapore 486066',
+				phoneNumber: '+1-6288007789',
+				googleLocation:
+					'https://www.google.com/maps/place/Pattem+Digital+Technologies/data=!4m2!3m1!1s0x0:0xe6a882f34a778e30?sa=X&ved=1t:2428&ictx=111',
 			},
 		],
 		isLoadMore: false,
