@@ -1126,7 +1126,6 @@
         <!-- Mega menu | end -->
       </div>
     </header>
-
     <!-- Mobile Menu | Start -->
     <div class="site-menu">
       <div class="site-menu__container">
@@ -1194,7 +1193,6 @@
       </div>
     </div>
     <!-- Mobile Menu | End -->
-
     <!-- hero banner -->
     <div class="hero-banner inner watermark">
       <div class="hero-banner__wrap container clearfix">
@@ -1229,7 +1227,6 @@
       </a>
     </div>
     <!--/ hero -->
-
     <div class="site-wrapper container career-page-content career-detail">
       <section class="tabs-wrapper" id="jobDetails-tab-section">
         <div class="tabs-container">
@@ -1437,7 +1434,8 @@
                                 <label for="pt-import-from__computer" style="cursor: pointer;">
                                   My Computer
                                 </label>
-                                <input type="file" id="pt-import-from__computer" accept=".pdf,.doc,.docx" style="display: none;" />
+                                <input type="file" id="pt-import-from__computer" accept=".pdf,.doc,.docx"
+                                  style="display: none;" />
                               </li>
                               <li>Dropbox</li>
                               <li>Google drive</li>
@@ -1911,63 +1909,7 @@
           </div>
         </div>
       </section>
-      <script type="module">
-        import {
-          Tabs,
-          MegaMenu,
-          GlobalSearch,
-          Multilingual,
-          JobDetails,
-          FileUpload,
-          ServiceForm,
-          CrudList,
-          ImportFrom,
-        } from './js/index.min.js';
-
-        new Multilingual({
-          selector: '#pt-multilingual',
-        });
-        new MegaMenu();
-        new GlobalSearch({
-          selector: '.pt-global-search',
-        });
-
-        new FileUpload({
-          selector: '.pt-file-upload',
-          multiple: true,
-        });
-        new Tabs({
-          selector: '#tabs-section',
-          onTabChange: () => {
-            console.log('Tab section changed');
-          },
-        });
-
-        new CrudList({
-          selector: '.pt-crud-list',
-          modalSelector: '#addExperience',
-          formSelector: '#experienceForm',
-        });
-
-        new JobDetails({
-          selector: '.cmp-job-details__wrapper',
-          formSelector: '.pt-form',
-          skipSubmission: true,
-          onSuccess: () => {
-            console.log('Form validation successful.');
-          },
-          onError: () => {
-            console.log('Form validation failed.');
-          },
-          identity: 'applyJobForm',
-        });
-
-        new ImportFrom({
-          selector: '.pt-import-from',
-        });
-      </script>
     </div>
-
     <footer class="footer">
       <div class="footer__navigation">
         <div class="footer__navigation-sub col-xs-12 col-sm-5 col-md-4" id="footer__subscription">
@@ -2060,34 +2002,78 @@
     </footer>
     <!--/ footer -->
   </main>
-  <script type="text/javascript" src="https://pattemdigital.com/devp/src/scripts/_header.js"
-    id="header.jquery-js"></script>
 
-  <script type="module">
-    import { VideoRecord,ImportFrom } from './js/index.min.js';
+  <script type="module" defer>
+    import {
+      Tabs,
+      MegaMenu,
+      GlobalSearch,
+      Multilingual,
+      JobDetails,
+      FileUpload,
+      ServiceForm,
+      CrudList,
+      ImportFrom,
+    } from './js/index.min.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Initialize the Video Record Component
-      new VideoRecord({
-        containerSelector: '.pt-videoRecord',
-        buttonText: 'Record Your Video',
-        bannerTitle: 'Create Your Video Resume',
-        maxRecordingTime: 180, // 3 minutes
-        maxFileSize: 100 * 1024 * 1024, // 100 MB
-        storageKey: 'videoResume',
-        onSave: (videoBlob) => {
-          console.log('Video saved:', videoBlob);
-          // Additional save logic if needed
-        },
-        onClose: () => {
-          console.log('Modal closed');
-        },
-      });
+    new Multilingual({
+      selector: '#pt-multilingual',
     });
-    // Initialize the Import From Component
+    new MegaMenu();
+    new GlobalSearch({
+      selector: '.pt-global-search',
+    });
+
+    new FileUpload({
+      selector: '.pt-file-upload',
+      multiple: true,
+    });
+    new Tabs({
+      selector: '#tabs-section',
+      onTabChange: () => {
+        console.log('Tab section changed');
+      },
+    });
+
+    new CrudList({
+      selector: '.pt-crud-list',
+      modalSelector: '#addExperience',
+      formSelector: '#experienceForm',
+    });
+
+    new JobDetails({
+      selector: '.cmp-job-details__wrapper',
+      formSelector: '.pt-form',
+      skipSubmission: true,
+      onSuccess: () => {
+        console.log('Form validation successful.');
+      },
+      onError: () => {
+        console.log('Form validation failed.');
+      },
+      identity: 'applyJobForm',
+    });
+
+    // Initialize the Video Record Component
+    new VideoRecord({
+      containerSelector: '.pt-videoRecord',
+      buttonText: 'Record Your Video',
+      bannerTitle: 'Create Your Video Resume',
+      maxRecordingTime: 180, // 3 minutes
+      maxFileSize: 100 * 1024 * 1024, // 100 MB
+      storageKey: 'videoResume',
+      onSave: (videoBlob) => {
+        console.log('Video saved:', videoBlob);
+        // Additional save logic if needed
+      },
+      onClose: () => {
+        console.log('Modal closed');
+      },
+    });
+
     new ImportFrom({
-					selector: '.pt-import-from',
-				});
+      selector: '.pt-import-from',
+    });
   </script>
 </body>
 
