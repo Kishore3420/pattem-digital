@@ -62,14 +62,9 @@
 		<!-- Preload important resources -->
 		<link
 			rel="preload"
-			href="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/client/Pattem-client-banner-logo-Adobe.svg"
+			href="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/client/Pattem client banner logo  Adobe.svg"
 			as="image"
 			fetchpriority="high"
-		/>
-		<link
-			rel="preload"
-			href="https://pattemdigital.com/production/wp-content/themes/pattemwp/assets/css/fonts/fonts-stylesheet.css"
-			as="style"
 		/>
 
 		<!-- Preconnect to resource origins -->
@@ -2295,12 +2290,29 @@
 			<div class="pt-banner__wrapper">
 				<div class="pt-banner__context pt-banner__content">
 					<div class="pt-banner__text-block">
-						<!-- LCP Element - Made accessible and optimized -->
-						<span class="brand-tagline animate-fade-in" id="main-tagline">We are collaboration for </span>
+						<div class="swiper tagline-swiper" data-direction="vertical" id="tagline-slider">
+              <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-title="Crafting Engaging Experience">
+                      <span class="brand-tagline">Crafting Engaging Experience</span>
+                    </div>
+                  
+                    <div class="swiper-slide" data-title="Shaping Agile App Development">
+                      <span class="brand-tagline">Shaping Agile App Development</span>
+                    </div>
+                  
+                    <div class="swiper-slide" data-title="Elevating Smart Solutions">
+                      <span class="brand-tagline">Elevating Smart Solutions</span>
+                    </div>
+                  
+                    <div class="swiper-slide" data-title="Advancing Future-Ready Systems">
+                      <span class="brand-tagline">Advancing Future-Ready Systems</span>
+                    </div>
+                  
+              </div>
+            </div>
 						<div
 							class="swiper"
 							data-direction="vertical"
-							id="brand-info-slider"
 							id="brand-info-slider"
 							aria-roledescription="carousel"
 							aria-label="Client brands showcase"
@@ -2309,7 +2321,6 @@
 								<div
 									class="swiper-slide"
 									data-company="Adobe"
-									data-title="We are collaboration for"
 									data-logo="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/icon/pattem digital client Adobe logo icon.svg"
 									data-description="We push design, creativity and user experience with our innovative cutting edge tech solutions."
 									data-background-color="#FB0F01"
@@ -2327,7 +2338,6 @@
 								<div
 									class="swiper-slide"
 									data-company="Builder.ai"
-									data-title="Shaping Agile App Development"
 									data-logo="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/icon/pattem digital client builder ai logo icon.svg"
 									data-description="Seamless app creation with precision for scalable and future-proof solutions."
 									data-background-color="#590de2"
@@ -2345,7 +2355,6 @@
 								<div
 									class="swiper-slide"
 									data-company="Legrand"
-									data-title="Elevating Smart Solutions"
 									data-logo="https://www.pattemdigital.com/production/wp-content/themes/pattemwp/assets/images/home-page/banner/icon/pattem digital client legrand logo icon.svg"
 									data-description="Our collaboration with Legrand brings smarter, future-ready infrastructure solutions to life."
 									data-background-color="#010101"
