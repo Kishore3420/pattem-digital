@@ -2064,7 +2064,7 @@
     id="header.jquery-js"></script>
 
   <script type="module">
-    import { VideoRecord } from './js/index.min.js';
+    import { VideoRecord,ImportFrom } from './js/index.min.js';
 
     document.addEventListener('DOMContentLoaded', () => {
       // Initialize the Video Record Component
@@ -2084,9 +2084,9 @@
         },
       });
     });
+    // Initialize the Import From Component
+      new ImportFrom();
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
 </body>
 
 </html>
